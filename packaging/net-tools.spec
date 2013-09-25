@@ -5,7 +5,7 @@ Summary: Basic networking tools
 Name: net-tools
 Version: 1.60
 Release: 87.3
-License: GPL+
+License: GPLv2+
 Group: System/Base
 URL: http://www.tazenda.demon.co.uk/phil/net-tools/
 Source0: http://www.tazenda.demon.co.uk/phil/net-tools/net-tools-%{version}.tar.bz2
@@ -216,6 +216,10 @@ do
 	done;
 done
 
+# license
+mkdir -p %{buildroot}/usr/share/license
+cp COPYING %{buildroot}/usr/share/license/%{name}
+
 %docs_package
 
 %lang_package
@@ -235,6 +239,7 @@ done
 %exclude /sbin/plipconfig
 %exclude /sbin/slattach
 %doc COPYING
+/usr/share/license/%{name}
 
 %files extra
 /bin/nisdomainname
