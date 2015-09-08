@@ -1,98 +1,100 @@
+#specfile originally created for Fedora, modified for Moblin Linux
 %define npversion	1.2.9
 
-Name:           net-tools
-Version:        1.60
-Release:        87
-License:        GPL+
-Summary:        Basic networking tools
-Url:            http://www.tazenda.demon.co.uk/phil/net-tools/
-Group:          System/Base
-Source0:        http://www.tazenda.demon.co.uk/phil/net-tools/net-tools-%{version}.tar.bz2
-Source1:        http://www.red-bean.com/~bos/netplug/netplug-%{npversion}.tar.bz2
-Source2:        net-tools-%{version}-config.h
-Source3:        net-tools-%{version}-config.make
-Source4:        ether-wake.c
-Source5:        ether-wake.8
-Source6:        mii-diag.c
-Source7:        mii-diag.8
-Patch1:         net-tools-1.57-bug22040.patch
-Patch2:         net-tools-1.60-miiioctl.patch
-Patch3:         net-tools-1.60-manydevs.patch
-Patch4:         net-tools-1.60-virtualname.patch
-Patch5:         net-tools-1.60-cycle.patch
-Patch6:         net-tools-1.60-nameif.patch
-Patch7:         net-tools-1.60-ipx.patch
-Patch8:         net-tools-1.60-inet6-lookup.patch
-Patch9:         net-tools-1.60-man.patch
-Patch10:        net-tools-1.60-gcc33.patch
-Patch11:        net-tools-1.60-trailingblank.patch
-Patch12:        net-tools-1.60-interface.patch
-Patch14:        net-tools-1.60-gcc34.patch
-Patch15:        net-tools-1.60-overflow.patch
-Patch19:        net-tools-1.60-siunits.patch
-Patch20:        net-tools-1.60-trunc.patch
-Patch21:        net-tools-1.60-return.patch
-Patch22:        net-tools-1.60-parse.patch
-Patch23:        net-tools-1.60-netmask.patch
-Patch24:        net-tools-1.60-ulong.patch
-Patch25:        net-tools-1.60-bcast.patch
-Patch26:        net-tools-1.60-mii-tool-obsolete.patch
-Patch27:        net-tools-1.60-netstat_ulong.patch
-Patch28:        net-tools-1.60-note.patch
-Patch29:        net-tools-1.60-num-ports.patch
-Patch30:        net-tools-1.60-duplicate-tcp.patch
-Patch31:        net-tools-1.60-statalias.patch
-Patch32:        net-tools-1.60-isofix.patch
-Patch33:        net-tools-1.60-bitkeeper.patch
-Patch34:        net-tools-1.60-ifconfig_ib.patch
-Patch35:        net-tools-1.60-de.patch
-Patch36:        netplug-1.2.9-execshield.patch
-Patch37:        net-tools-1.60-pie.patch
-Patch38:        net-tools-1.60-ifaceopt.patch
-Patch39:        net-tools-1.60-trim_iface.patch
-Patch40:        net-tools-1.60-stdo.patch
-Patch41:        net-tools-1.60-statistics.patch
-Patch42:        net-tools-1.60-ifconfig.patch
-Patch43:        net-tools-1.60-arp_overflow.patch
-Patch44:        net-tools-1.60-hostname_man.patch
-Patch45:        net-tools-1.60-interface_stack.patch
-Patch46:        net-tools-1.60-selinux.patch
-Patch47:        net-tools-1.60-netstat_stop_trim.patch
-Patch48:        net-tools-1.60-netstat_inode.patch
-Patch49:        net-tools-1.60-fgets.patch
-Patch50:        net-tools-1.60-ifconfig_man.patch
-Patch51:        net-tools-1.60-x25-proc.patch
-Patch52:        net-tools-1.60-sctp.patch
-Patch53:        net-tools-1.60-arp_man.patch
-Patch54:        net-tools-1.60-ifconfig-long-iface-crasher.patch
-Patch55:        net-tools-1.60-netdevice.patch
-Patch56:        net-tools-1.60-skip.patch
-Patch57:        net-tools-1.60-netstat-I-fix.patch
-Patch58:        net-tools-1.60-nameif_strncpy.patch
-Patch59:        net-tools-1.60-arp-unaligned-access.patch
-Patch60:        net-tools-1.60-sctp-quiet.patch
-Patch61:        net-tools-1.60-remove_node.patch
-Patch62:        net-tools-1.60-netstat-interfaces-crash.patch
-Patch63:        net-tools-1.60-netplugd_init.patch
-Patch64:        net-tools-1.60-ec_hw_null.patch
-Patch65:        net-tools-1.60-statistics_buffer.patch
-Patch66:        net-tools-1.60-sctp-addrs.patch
-Patch67:        net-tools-1.60-i-option.patch
-Patch68:        net-tools-1.60-a-option.patch
-Patch69:        net-tools-1.60-clear-flag.patch
-Patch70:        net-tools-1.60-metric-tunnel-man.patch
-Patch71:        net-tools-1.60-netstat-probe.patch
-Patch72:        net-tools-1.60-ip.patch
+Summary: Basic networking tools
+Name: net-tools
+Version: 1.60
+Release: 87.3
+License: GPL-2.0+
+Group: System/Base
+URL: http://www.tazenda.demon.co.uk/phil/net-tools/
+Source0: http://www.tazenda.demon.co.uk/phil/net-tools/net-tools-%{version}.tar.bz2
+Source1: http://www.red-bean.com/~bos/netplug/netplug-%{npversion}.tar.bz2
+Source2: net-tools-%{version}-config.h
+Source3: net-tools-%{version}-config.make
+Source4: ether-wake.c
+Source5: ether-wake.8
+Source6: mii-diag.c
+Source7: mii-diag.8
+Source1001: %{name}.manifest
+Patch1: net-tools-1.57-bug22040.patch
+Patch2: net-tools-1.60-miiioctl.patch
+Patch3: net-tools-1.60-manydevs.patch
+Patch4: net-tools-1.60-virtualname.patch
+Patch5: net-tools-1.60-cycle.patch
+Patch6: net-tools-1.60-nameif.patch
+Patch7: net-tools-1.60-ipx.patch
+Patch8: net-tools-1.60-inet6-lookup.patch
+Patch9: net-tools-1.60-man.patch
+Patch10: net-tools-1.60-gcc33.patch
+Patch11: net-tools-1.60-trailingblank.patch
+Patch12: net-tools-1.60-interface.patch
+Patch14: net-tools-1.60-gcc34.patch
+Patch15: net-tools-1.60-overflow.patch
+Patch19: net-tools-1.60-siunits.patch
+Patch20: net-tools-1.60-trunc.patch
+Patch21: net-tools-1.60-return.patch
+Patch22: net-tools-1.60-parse.patch
+Patch23: net-tools-1.60-netmask.patch
+Patch24: net-tools-1.60-ulong.patch
+Patch25: net-tools-1.60-bcast.patch
+Patch26: net-tools-1.60-mii-tool-obsolete.patch
+Patch27: net-tools-1.60-netstat_ulong.patch
+Patch28: net-tools-1.60-note.patch
+Patch29: net-tools-1.60-num-ports.patch
+Patch30: net-tools-1.60-duplicate-tcp.patch
+Patch31: net-tools-1.60-statalias.patch
+Patch32: net-tools-1.60-isofix.patch
+Patch33: net-tools-1.60-bitkeeper.patch
+Patch34: net-tools-1.60-ifconfig_ib.patch
+Patch35: net-tools-1.60-de.patch
+Patch36: netplug-1.2.9-execshield.patch
+Patch37: net-tools-1.60-pie.patch
+Patch38: net-tools-1.60-ifaceopt.patch
+Patch39: net-tools-1.60-trim_iface.patch
+Patch40: net-tools-1.60-stdo.patch
+Patch41: net-tools-1.60-statistics.patch
+Patch42: net-tools-1.60-ifconfig.patch
+Patch43: net-tools-1.60-arp_overflow.patch
+Patch44: net-tools-1.60-hostname_man.patch
+Patch45: net-tools-1.60-interface_stack.patch
+Patch46: net-tools-1.60-selinux.patch
+Patch47: net-tools-1.60-netstat_stop_trim.patch
+Patch48: net-tools-1.60-netstat_inode.patch
+Patch49: net-tools-1.60-fgets.patch
+Patch50: net-tools-1.60-ifconfig_man.patch
+Patch51: net-tools-1.60-x25-proc.patch
+Patch52: net-tools-1.60-sctp.patch
+Patch53: net-tools-1.60-arp_man.patch
+Patch54: net-tools-1.60-ifconfig-long-iface-crasher.patch
+Patch55: net-tools-1.60-netdevice.patch
+Patch56: net-tools-1.60-skip.patch
+Patch57: net-tools-1.60-netstat-I-fix.patch
+Patch58: net-tools-1.60-nameif_strncpy.patch
+Patch59: net-tools-1.60-arp-unaligned-access.patch
+Patch60: net-tools-1.60-sctp-quiet.patch
+Patch61: net-tools-1.60-remove_node.patch
+Patch62: net-tools-1.60-netstat-interfaces-crash.patch
+Patch63: net-tools-1.60-netplugd_init.patch
+Patch64: net-tools-1.60-ec_hw_null.patch
+Patch65: net-tools-1.60-statistics_buffer.patch
+Patch66: net-tools-1.60-sctp-addrs.patch
+Patch67: net-tools-1.60-i-option.patch
+Patch68: net-tools-1.60-a-option.patch
+Patch69: net-tools-1.60-clear-flag.patch
+Patch70: net-tools-1.60-metric-tunnel-man.patch
+Patch71: net-tools-1.60-netstat-probe.patch
+Patch72: net-tools-1.60-ip.patch
 
-BuildRequires:  gettext-tools
+BuildRequires: gettext-tools
 
 %description
 The net-tools package contains basic networking tools, including
 ifconfig, netstat, route, and others.
 
 %package extra
-Summary:        Extra goodies from net-tools package
-Group:          System/Base
+Summary: Extra goodies from net-tools package
+Group: System/Base
 
 %description extra
 net-tools extra goodies, including not-so commonly needed tools
@@ -174,24 +176,25 @@ localized support.
 %patch72 -p1 -b .iptunnel
 
 
-cp %{SOURCE2} ./config.h
-cp %{SOURCE3} ./config.make
-cp %{SOURCE4} .
-cp %{SOURCE5} ./man/en_US
-cp %{SOURCE6} .
-cp %{SOURCE7} ./man/en_US
+cp %SOURCE2 ./config.h
+cp %SOURCE3 ./config.make
+cp %SOURCE4 .
+cp %SOURCE5 ./man/en_US
+cp %SOURCE6 .
+cp %SOURCE7 ./man/en_US
 
 
 
 %build
+cp %{SOURCE1001} .
 sed -i "s/HAVE_SELINUX=1/HAVE_SELINUX=0/g" ./config.make
 make
-gcc %{optflags} -o ether-wake ether-wake.c
-gcc %{optflags} -o mii-diag mii-diag.c
+gcc $RPM_OPT_FLAGS -o ether-wake ether-wake.c
+gcc $RPM_OPT_FLAGS -o mii-diag mii-diag.c
 
 %install
 
-make BASEDIR=%{buildroot} mandir=%{_mandir} install
+make BASEDIR=$RPM_BUILD_ROOT mandir=%{_mandir} install
 
 install -m 755 ether-wake %{buildroot}/sbin
 install -m 755 mii-diag %{buildroot}/sbin
@@ -203,11 +206,24 @@ rm -rf %{buildroot}%{_mandir}/*/man*
 
 %find_lang %{name}
 
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/license
+for keyword in LICENSE COPYING COPYRIGHT;
+do
+	for file in `find %{_builddir} -name $keyword`;
+	do
+		cat $file >> $RPM_BUILD_ROOT%{_datadir}/license/%{name};
+		echo "";
+	done;
+done
+
 %docs_package
 
 %lang_package
 
 %files
+%defattr(-,root,root,-)
+%manifest %{name}.manifest
+%{_datadir}/license/%{name}
 /bin/*
 /sbin/*
 %exclude /bin/nisdomainname
