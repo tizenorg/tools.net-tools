@@ -4,7 +4,8 @@
 Summary: Basic networking tools
 Name: net-tools
 Version: 1.60
-Release: 87.3
+Release: %{?release_prefix:%{release_prefix}.}87.45.%{?dist}%{!?dist:tizen}
+VCS:     external/net-tools#Z910F_PROTEX_0512-2-gcf2fb2f802811f380c77fdb0b636d08f1ac1be09
 License: GPL-2.0+
 Group: System/Base
 URL: http://www.tazenda.demon.co.uk/phil/net-tools/
@@ -245,3 +246,74 @@ done
 /sbin/mii-tool
 /sbin/plipconfig
 /sbin/slattach
+%changelog
+* Tue Jun 17 2014 WaLyong Cho <walyong.cho@samsung.com> - None 
+- PROJECT: external/net-tools
+- COMMIT_ID: cf2fb2f802811f380c77fdb0b636d08f1ac1be09
+- BRANCH: master
+- PATCHSET_REVISION: cf2fb2f802811f380c77fdb0b636d08f1ac1be09
+- CHANGE_OWNER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- PATCHSET_UPLOADER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- CHANGE_URL: http://slp-info.sec.samsung.net/gerrit/519585
+- PATCHSET_REVISION: cf2fb2f802811f380c77fdb0b636d08f1ac1be09
+- TAGGER: WaLyong Cho <walyong.cho@samsung.com>
+- Gerrit patchset approval info:
+- WaLyong Cho <walyong.cho@samsung.com> Verified : 1
+- Kim ByungSoo <bs1770.kim@samsung.com> Code-Review : 2
+- CHANGE_SUBJECT: Merge branch 'devel/systemfw/master'
+- Merge branch 'devel/systemfw/master'
+* Wed Nov 27 2013 WaLyong Cho <walyong.cho@samsung.com> - None 
+- PROJECT: external/net-tools
+- COMMIT_ID: 3c2a1661fcff16ee887977b16560303e141ba775
+- PATCHSET_REVISION: 3c2a1661fcff16ee887977b16560303e141ba775
+- CHANGE_OWNER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- PATCHSET_UPLOADER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- CHANGE_URL: http://slp-info.sec.samsung.net/gerrit/348433
+- PATCHSET_REVISION: 3c2a1661fcff16ee887977b16560303e141ba775
+- TAGGER: WaLyong Cho <walyong.cho@samsung.com>
+- Gerrit patchset approval info:
+- Kyungmin Park <kyungmin.park@samsung.com> Code Review : 2
+- Kyungmin Park <kyungmin.park@samsung.com> Verified : 1
+- WaLyong Cho <walyong.cho@samsung.com> Verified : 1
+- CHANGE_SUBJECT: Merge branch 'devel/systemfw/master'
+- Merge branch 'devel/systemfw/master'
+* Mon Sep 16 2013 walyong.cho <walyong.cho@samsung.com> - net-tools_1.60-slp2+s87.3_1 
+- PROJECT: external/net-tools
+- COMMIT_ID: 5eeb194f7720cff1d8cb8f939d1f170fb6626c89
+- PATCHSET_REVISION: 5eeb194f7720cff1d8cb8f939d1f170fb6626c89
+- CHANGE_OWNER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- PATCHSET_UPLOADER: \"WaLyong Cho\" <walyong.cho@samsung.com>
+- CHANGE_URL: http://slp-info.sec.samsung.net/gerrit/147777
+- PATCHSET_REVISION: 5eeb194f7720cff1d8cb8f939d1f170fb6626c89
+- TAGGER: walyong.cho <walyong.cho@samsung.com>
+- Gerrit patchset approval info:
+- Kyungmin Park <kyungmin.park@samsung.com> Code Review : 2
+- Kyungmin Park <kyungmin.park@samsung.com> Verified : 1
+- CHANGE_SUBJECT: smack execution label delete
+- [Version] net-tools 1.60-87.3
+- [Project] GT-I8800, Public
+- [Title] smack execution label delete
+- [BinType] PDA/MODEM/CSC
+- [Issue#] N/A
+- [Problem] smack execution label delete
+- [Cause] smack execution label delete
+- [Solution] smack execution label delete
+- [Team] System FW
+- [Developer]  walyong.cho
+- [Request] N/A
+- [Horizontal expansion] N/A
+- [SCMRequest] N/A
+* Mon Feb  4 2013 walyong.cho <walyong.cho@samsung.com> - net-tools_1.60-slp2+s87.3_1 
+- [Version] net-tools 1.60-87.3
+- [Project] GT-I8800, Public
+- [Title] smack execution label delete
+- [BinType] PDA/MODEM/CSC
+- [Issue#] N/A
+- [Problem] smack execution label delete
+- [Cause] smack execution label delete
+- [Solution] smack execution label delete
+- [Team] System FW
+- [Developer]  walyong.cho
+- [Request] N/A
+- [Horizontal expansion] N/A
+- [SCMRequest] N/A

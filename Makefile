@@ -220,9 +220,6 @@ ipmaddr:	$(NET_LIB) ipmaddr.o
 mii-tool:	mii-tool.o
 		$(CC) $(LDFLAGS) -o mii-tool mii-tool.o
 
-CFLAGS += -fPIE
-LDFLAGS += -pie
-
 installbin:
 	install -m 0755 -d ${BASEDIR}/sbin
 	install -m 0755 -d ${BASEDIR}/bin
